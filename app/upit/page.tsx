@@ -7,7 +7,7 @@ export default function Page() {
   async function create(formData: FormData) {
     "use server";
     const test = createClient({
-      accessToken: "CFPAT-QvI2kqJoC7oP8muMAMPEa357rQt7R4WSpcwwbaP7CIc",
+      accessToken: process.env.ACCESS_TOKEN!,
     });
     const rawFormData = {
       ime: formData.get("ime"),
